@@ -1,0 +1,9 @@
+node_modules/
+.idea/
+.taskkey
+*.vsix
+*.iml
+
+# Do not commit compiled js
+tasks/*/*.js
+
