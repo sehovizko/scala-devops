@@ -1,16 +1,29 @@
 {
   "name": "pipelines4s",
-  "description": "Tasks and utilities for compilation, testing, and deployment of Scala and/or Java based projects.",
+  "description": "Azure DevOps Pipelines extension providing assorted tasks for compilation, testing, and deployment of Scala and/or Java based projects",
+  "scripts": {
+    "build": "exit 0",
+    "test": "exit 0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/duchessa/pipelines4s"
+    "url": "git+https://github.com/duchessa/pipelines4s.git"
   },
-  "scripts": {
-    "clean": "node clean.js",
-    "build-tasks": "npm --prefix=tasks/setup-sbt run build && npm --prefix=tasks/setup-graalvm run build",
-    "build": "npm run build-tasks && npm install && node_modules/.bin/tfx extension create --manifest vss-extension.json"
+  "author": "Duchessa Project",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/duchessa/pipelines4s/issues"
   },
+  "homepage": "https://github.com/duchessa/pipelines4s#readme",
   "devDependencies": {
-    "tfx-cli": "^0.9.0"
+    "@types/node": "^14.17.1",
+    "@types/q": "^1.5.4",
+    "@types/shelljs": "^0.8.8",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "azure-pipelines-task-lib": "^3.1.2",
+    "azure-pipelines-tool-lib": "^1.0.2",
+    "typed-rest-client": "^1.8.4"
   }
 }
